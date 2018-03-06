@@ -46,5 +46,5 @@ MongoClient.connect("mongodb://localhost", (err, client) => {
         client.emit('list', factories);
     });
 
-    server.listen(4200);
+    server.listen(80);
 });
