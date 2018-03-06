@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+    <body>
+        <h1>Hello World!</h1>
+        <div id="future"></div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io.connect();
+            socket.on('list', function(data) {
+                console.log('List emit: ', data);
+            });
+            socket.on('update', function(data) {
+                console.log('Update emit: ', data);
+            });
+        </script>
+    </body>
+</html>

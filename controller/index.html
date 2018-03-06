@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+    <body>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io.connect();
+            socket.on('list', function(data) {
+                console.log('List emit: ', data);
+            });
+            socket.on('update', function(data) {
+                console.log('Update emit: ', data);
+            });
+        </script>
+    </body>
+</html>
